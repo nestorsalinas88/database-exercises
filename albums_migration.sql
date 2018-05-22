@@ -1,7 +1,7 @@
 USE codeup_test_db;
 
 
-CREATE TABLE albums (
+CREATE TABLE IF NOT EXISTS albums(
   id INT unsigned NOT NULL AUTO_INCREMENT,
   artist VARCHAR(120),
   record_name VARCHAR(120) NOT NULL,
