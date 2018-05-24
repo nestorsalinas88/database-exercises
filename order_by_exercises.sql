@@ -1,18 +1,21 @@
-SELECT *
+USE employees;
+
+SELECT first_name, last_name
 FROM employees
-WHERE first_name IN ('Irena', 'Irena', 'Maya')
+WHERE gender = 'M'
+AND (first_name = 'Irena' OR first_name ='Vidya' OR first_name = 'Maya')
 ORDER BY first_name;
 
 
-SELECT *
+SELECT first_name, last_name  AS '--->>> MORE <<<---'
 FROM employees
 WHERE first_name IN ('Vidya','Irena','Maya')
 ORDER BY first_name, last_name;
 
-SELECT *
+SELECT first_name, last_name
 FROM employees
-WHERE first_name IN ('Vidya','Irena','Maya')
-ORDER BY last_name, first_name;
+WHERE last_name LIKE 'E%'
+ORDER BY emp_no DESC;
 
 SELECT *
 FROM employees
