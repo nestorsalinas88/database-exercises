@@ -38,3 +38,19 @@ WHERE dept_no IN(
   )
     AND to_date > NOW()
 );
+
+
+-- Find the first and last name of the employee with the highest salary.
+
+
+
+SELECT first_name, first_name
+FROM employees
+WHERE emp_no = (
+  SELECT emp_no
+  FROM salaries
+  WHERE salary = (
+    SELECT MAX(salary)
+    FROM salaries
+  )
+);
