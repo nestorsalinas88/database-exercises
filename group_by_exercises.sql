@@ -15,9 +15,16 @@ AND last_name NOT LIKE '%qu%'
 GROUP BY last_name;
 
 
-SELECT first_name, COUNT(first_name)
+SELECT last_name, COUNT(last_name) AS '# of peeps w? last name'
 FROM employees
-WHERE first_name NOT LIKE '%a%'
-GROUP BY first_name;
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY last_name;
+
+
+SELECT COUNT(*) "#", gender
+FROM employees
+WHERE first_name IN ('Vidya', 'Irena', 'Maya')
+GROUP BY gender;
 
 
