@@ -30,3 +30,15 @@ WHERE last_name IN ('Herber', 'Dredge', 'Lipner', 'Baek');
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name = 'Baek';
+
+SELECT  emp_no, title
+FROM titles
+WHERE to_date IS NULL;
+
+
+# Chaining a clause
+
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE emp_no < 20000 AND gender = 'f'
+  AND last_name IN ('Herber', 'Baek');
